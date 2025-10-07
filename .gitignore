@@ -1,0 +1,74 @@
+# Created by https://www.toptal.com/developers/gitignore/api/java
+# Edit at https://www.toptal.com/developers/gitignore?templates=java
+
+### Java ###
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+# End of https://www.toptal.com/developers/gitignore/api/java
+# === 新增：Minecraft Forge 模组开发专用 ===
+
+# Gradle 构建系统
+.gradle/
+build/
+out/
+bin/
+.gradle/loom-cache/
+
+# Minecraft 开发环境
+run/
+.minecraft/
+/mods/
+/config/
+/saves/
+/resources/
+/scripts/
+/crash-reports/
+/resourcepacks/
+/screenshots/
+
+# IDE 和开发工具
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.metadata/
+.settings/
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 本地配置文件（可能包含敏感信息）
+*.properties
+*.cfg
+
+# 临时文件
+*.tmp
+*.temp
+*~
+*.bak
