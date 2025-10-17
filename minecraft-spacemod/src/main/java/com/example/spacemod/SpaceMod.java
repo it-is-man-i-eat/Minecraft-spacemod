@@ -1,10 +1,14 @@
 package com.example.spacemod;
 
+import com.example.spacemod.command.TestCommand;
+import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod("spacemod")
+@Mod.EventBusSubscriber(modid = "spacemod", bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class SpaceMod {
     public static final String MOD_ID = "spacemod";
     public static final Logger LOGGER = LogManager.getLogger();
@@ -19,13 +23,11 @@ public class SpaceMod {
         LOGGER.info("✓ 球形世界系统准备就绪");
         LOGGER.info("✓ 坐标映射系统已加载");
         LOGGER.info("✓ 准备创建星际体验!");
-        
-        // 注册世界生成器
-        registerWorldGenerator();
     }
     
-    private void registerWorldGenerator() {
-        LOGGER.info("注册球形世界生成器...");
-        // 世界生成器注册逻辑将在这里实现
+    @SubscribeEvent
+    public static void onRegisterCommands(RegisterCommandsEvent event) {
+        TestCommand.register(event.getDispatcher());
+        LOGGER.info("✓ 太空模组测试命令已注册");
     }
 }
