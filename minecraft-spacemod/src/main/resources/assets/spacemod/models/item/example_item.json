@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft-spacemod",
+  "path": "src/main/resources/assets/spacemod/models/item/example_item.json",
+  "content": {
+    "parent": "minecraft-spacemod",
+    "path": "src/main/resources/assets/spacemod/models/item/example_item.json",
+    "model": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "spacemod:item/example_item"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+modLoader="javafml:1.18.2"
+loader="javafml"
+displayName="Space Mod"
+description="A Minecraft Forge mod for space exploration."
+version="1.0.0"
+authors="YourName"
+credits="YourCredits"
+logo="assets/spacemod/logo.png"
+
+[[dependencies]]
+modId="forge"
+mandatory=true
+versionRange="[36.1.0,)"

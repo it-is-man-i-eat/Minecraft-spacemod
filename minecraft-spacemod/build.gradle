@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group 'com.example'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://files.minecraftforge.net/maven' }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.16.5-36.1.0' // Replace with the desired Minecraft version
+    // Add other dependencies here
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    manifest {
+        attributes(
+            'ModID': 'spacemod',
+            'Implementation-Title': 'Space Mod',
+            'Implementation-Version': version,
+            'Implementation-Vendor': 'Your Name'
+        )
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
