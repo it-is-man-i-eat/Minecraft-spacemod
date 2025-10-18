@@ -1,6 +1,7 @@
 package com.example.spacemod;
 
 import com.example.spacemod.command.TestCommand;
+import com.example.spacemod.command.DebugCommand;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -28,6 +29,7 @@ public class SpaceMod {
     @SubscribeEvent
     public static void onRegisterCommands(RegisterCommandsEvent event) {
         TestCommand.register(event.getDispatcher());
-        LOGGER.info("✓ 太空模组测试命令已注册");
+        DebugCommand.register(event.getDispatcher());
+        LOGGER.info("✓ 太空模组命令系统已注册");
     }
 }

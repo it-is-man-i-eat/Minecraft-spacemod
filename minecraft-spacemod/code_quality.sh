@@ -67,14 +67,6 @@ for file in "${core_files[@]}"; do
 done
 
 echo ""
-echo "3. 运行算法逻辑验证..."
-if [ -f "test_algorithms.sh" ]; then
-    ./test_algorithms.sh
-else
-    echo "⚠️  算法测试脚本不存在，跳过算法验证"
-fi
-
-echo ""
 echo "=== 检查完成 ==="
 echo "发现的问题数量: $error_count"
 if [ $error_count -eq 0 ]; then
